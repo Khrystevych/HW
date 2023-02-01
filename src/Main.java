@@ -16,8 +16,8 @@ public class Main {
     public static void main(String[] args) {
         max("world", "hold", "on");
 
-        Month str = new Month();
-
+Month m = new Month();
+m.Man();
 
         for (int i = 1; i <= 5; i++) {
             for (int k = i; k >= 1; k--) {
