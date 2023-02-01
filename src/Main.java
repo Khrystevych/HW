@@ -1,36 +1,45 @@
-public class Main {
+import java.util.Scanner;
 
-    static void max(String a, String b, String c) {
-        int word1 = a.length();
-        int word2 = b.length();
-        int word3 = c.length();
-        if (word1 > word2 && word1 > word3) {
-            System.out.println("The longest word - " + a);
-        } else if (word2 > word1 && word2 > word3) {
-            System.out.println("The longest word - " + b);
+public class Main {
+    static int showSomething(int number) {
+        int digit, sum = 0;
+        while (number > 0) {
+            digit = number % 10;
+            sum = sum + digit;
+            number = number / 10;
+        }
+        System.out.println("Sum of Digits: " + sum);
+        return sum;
+    }
+
+    static void showSomething(String myString1) {
+        Scanner c = new Scanner(System.in);
+        System.out.print("Enter word: ");
+        String myString2 = c.next();
+        int word1 = myString1.length();
+        int word2 = myString2.length();
+        int length = word1 + word2;
+        System.out.println("Sum of two words lengths: " + length);
+    }
+
+    static boolean showSomething() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int num = input.nextInt();
+        if (num > 0) {
+            System.out.println("Number > 0");
+            return true;
         } else {
-            System.out.println("The longest word - " + c);
+            System.out.println("Number < 0");
+            return false;
         }
     }
 
     public static void main(String[] args) {
-        max("world", "hold", "on");
-
-Month m = new Month();
-m.Man();
-
-        for (int i = 1; i <= 5; i++) {
-            for (int k = i; k >= 1; k--) {
-                System.out.print("x");
-            }
-            System.out.println();
-        }
-        for (int i = 1; i <= 4; i++) {
-            for (int k = i; k <= 4; k++) {
-                System.out.print("x");
-            }
-            System.out.println();
-        }
-        }
-
+        showSomething(123);
+        showSomething("Hello");
+        showSomething();
     }
+}
+
+
