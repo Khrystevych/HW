@@ -22,9 +22,12 @@ class Pet extends Animal {
     int tail = 1;
     int paw = 4;
 
+    Pet(String phrase) {
+        super(phrase);
+    }
+
     Pet(String phrase, int eyes) {
-        super("I am animal");
-        this.phrase = phrase;
+        super(phrase);
         this.eyes = eyes;
     }
 
@@ -40,8 +43,7 @@ class Pet extends Animal {
 class Dog extends Pet {
 
     Dog(String phrase, String name) {
-        super("I am pet", 2);
-        this.phrase = phrase;
+        super(phrase);
         this.name = name;
     }
 
@@ -51,9 +53,9 @@ class Dog extends Pet {
 }
 
 class Cat extends Pet {
+
     Cat(String phrase, String name) {
-        super("I am pet", 2);
-        this.phrase = phrase;
+        super(phrase);
         this.name = name;
     }
 
@@ -65,14 +67,14 @@ class Cat extends Pet {
 class Test {
     public static void main(String[] args) {
         Animal animal = new Animal("I am animal");
-        System.out.println(animal);
+        System.out.println(animal.phrase);
         Pet pet = new Pet("I am pet", 2);
-        System.out.println(pet);
-        Dog dog = new Dog("I am dog and my name is:", "Rex");
-        System.out.println(dog);
+        System.out.println(pet.phrase + ", " + pet.eyes);
+        Dog dog = new Dog("I am dog and my name is: ", "Rex");
+        System.out.println(dog.phrase + dog.name);
         System.out.println(dog.paw);
-        Cat cat = new Cat("I am cat and my name is:", "Oscar");
-        System.out.println(cat);
+        Cat cat = new Cat("I am cat and my name is: ", "Oscar");
+        System.out.println(cat.phrase + cat.name);
         cat.sleep();
     }
 }

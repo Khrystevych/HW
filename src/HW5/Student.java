@@ -36,9 +36,7 @@ public class Student {
     }
 
     void showInfo() {
-        System.out.println("Name: " + getName());
-        System.out.println("Course: " + getCourse());
-        System.out.println("Grade: " + getGrade());
+        System.out.println("Name: " + getName() + ", " + "Course: " + getCourse() + ", " + "Grade: " + getGrade());
     }
 }
 
